@@ -1,0 +1,19 @@
+{
+  "name": "signup",
+  "version": "1.0.0",
+  "description": "\"sign up page\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Moh Shawky",
+  "license": "ISC",
+  "dependencies": {
+    "body": "^5.1.0",
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "parser": "^0.1.4",
+    "request": "^2.88.2",
+    "superagent": "^8.0.0"
+  }
+}
