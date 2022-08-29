@@ -14,6 +14,9 @@ const PORT = process.env.PORT || 3000;
 
 express().get('/cool', (req, res) => res.send(cool()))
 
+.get('/times', (req, res) => res.send(showTimes()))
+
+
 // var options = {
 //     url: "// https://us6.api.mailchimp.com/3.0/lists/7d268ab8bf/members/ac7ca024a3face5dada76924e926e2fb-us9/notes",
 //     method: "POST",
@@ -78,3 +81,12 @@ app.post("/failureSignup",function(req,res){
 app.listen(process.env.PORT|| 3000 , function () {
     console.log("server running on port 3000");
 });
+
+showTimes = () => {
+    let result = '';
+    const times = process.env.TIMES || 5;
+    for (i = 0; i < times; i++) {
+      result += i + ' ';
+    }
+    return result;
+  }
