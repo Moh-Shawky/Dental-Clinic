@@ -8,6 +8,12 @@ app.use(express.static('public'))
 app.use(bodyparser.urlencoded({ extended: true }));
 
 
+const cool = require('cool-ascii-faces');
+const path = require('path');
+const PORT = process.env.PORT || 3000;
+
+express().get('/cool', (req, res) => res.send(cool()))
+
 // var options = {
 //     url: "// https://us6.api.mailchimp.com/3.0/lists/7d268ab8bf/members/ac7ca024a3face5dada76924e926e2fb-us9/notes",
 //     method: "POST",
@@ -69,6 +75,6 @@ app.post("/failureSignup",function(req,res){
     res.redirect("/")
 })
 
-app.listen(process.env.PORT|| 3000, function () {
+app.listen(process.env.PORT|| 3000 , function () {
     console.log("server running on port 3000");
 });
